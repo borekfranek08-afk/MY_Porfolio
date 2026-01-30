@@ -1,0 +1,19 @@
+# Systémové soubory (balast z Windows a macOS)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Nastavení editorů (aby se kolegům nepletlo vaše nastavení oken)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logy a dočasné soubory
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tajné informace (pokud byste náhodou použili např. Firebase API klíče)
+.env
