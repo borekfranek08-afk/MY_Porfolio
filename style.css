@@ -41,6 +41,12 @@ nav button {
 
 nav button i {
   margin-right: 8px;
+  font-size: 18px;
+}
+
+nav button i.material-icons {
+  font-size: 20px;
+  vertical-align: middle;
 }
 
 nav button:hover {
@@ -75,7 +81,7 @@ section {
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px #8a2be2;
-  flex: 0 1 calc(33.333% - 15px);
+  flex: 0 1 calc(25% - 15px);
   box-sizing: border-box;
 }
 
@@ -109,6 +115,11 @@ p {
 #contact p i {
   margin-right: 10px;
   color: #8a2be2;
+}
+
+#contact p i.material-icons {
+  font-size: 18px;
+  vertical-align: middle;
 }
 
 .gallery-tabs {
