@@ -1,3 +1,25 @@
+document.addEventListener('DOMContentLoaded', function() {
+  // Nav buttons
+  document.getElementById('about-btn').addEventListener('click', function() {
+    scrollToSection('about');
+  });
+  document.getElementById('gallery-btn').addEventListener('click', function() {
+    scrollToSection('gallery');
+  });
+  document.getElementById('contact-btn').addEventListener('click', function() {
+    scrollToSection('contact');
+  });
+
+  // Gallery tabs
+  const tabButtons = document.querySelectorAll('.tab-button');
+  tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const category = this.getAttribute('data-category');
+      showCategory(category);
+    });
+  });
+});
+
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (section) {

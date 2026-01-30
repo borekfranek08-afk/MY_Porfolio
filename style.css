@@ -11,7 +11,7 @@ body {
 header {
   background-color: #1a0033;
   color: #fff;
-  padding: 50px;
+  padding: 50px 20px;
   text-align: center;
   font-size: 2em;
   text-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 30px #8a2be2;
@@ -86,6 +86,7 @@ section {
 
 .project-item img {
   max-width: 100%;
+  height: auto;
   border: 2px solid #8a2be2;
   transition: all 0.3s;
 }
@@ -114,6 +115,7 @@ p {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .tab-button {
@@ -140,4 +142,116 @@ p {
 
 .gallery-category.active {
   display: block;
+}
+
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) {
+  .project-item {
+    flex: 0 1 calc(50% - 15px);
+  }
+  
+  h1, h2 {
+    font-size: 2em;
+  }
+  
+  header {
+    padding: 40px 20px;
+    font-size: 1.8em;
+  }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  header {
+    padding: 30px 15px;
+    font-size: 1.5em;
+  }
+  
+  h1, h2 {
+    font-size: 1.8em;
+  }
+  
+  p {
+    font-size: 1em;
+  }
+  
+  nav {
+    padding: 15px 10px;
+  }
+  
+  nav button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 12px;
+    font-size: 18px;
+  }
+  
+  section {
+    margin: 10px;
+    padding: 20px 15px;
+  }
+  
+  .project-gallery {
+    gap: 10px;
+  }
+  
+  .project-item {
+    flex: 0 1 100%;
+    padding: 15px;
+  }
+  
+  .gallery-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  #contact p {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 20px 10px;
+    font-size: 1.3em;
+  }
+  
+  h1, h2 {
+    font-size: 1.5em;
+  }
+  
+  nav button {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  section {
+    padding: 15px 10px;
+  }
+  
+  .project-item {
+    padding: 10px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a0033;
+  color: #fff;
+  font-size: 16px;
 }

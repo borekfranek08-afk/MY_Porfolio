@@ -2,8 +2,12 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moje Portfolio</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,88 +17,89 @@
 <script src="script.js"></script>
 
   <nav id="navbar">
-    <button onclick="scrollToSection('about')"><i class="fas fa-user"></i> About me</button>
-    <button onclick="scrollToSection('gallery')"><i class="fas fa-images"></i> Gallery</button>
-    <button onclick="scrollToSection('contact')"><i class="fas fa-envelope"></i> Contact</button>
+    <button id="about-btn"><i class="fas fa-user"></i> About me</button>
+    <button id="gallery-btn"><i class="fas fa-images"></i> Gallery</button>
+    <button id="contact-btn"><i class="fas fa-envelope"></i> Contact</button>
   </nav>
 
   <header>
-    <h1>Hi!, I'm Bořek Franek</h1>
-    <p>I'm startuping in IT bussiness.</p>
+    <h1>Hi! I'm Bořek Franek</h1>
+    <p>I'm starting up in creative work such as videos, web design, and graphic design.</p>
   </header>
 
   <section id="about">
     <h2>About me</h2>
-    <p>I love working with hardware and creative work such as websites, posters and videos, and I am currently studying IT in industry at Jablunkov High School. My dream is to do what I enjoy (IT + sports) and live every day to the fullest.</p>
+    <p>I'm an 18-year-old student of Information Technologies (IT) at Jablunkov High School.<br>
+       I like working with computers and graphic design.</p>
   </section>
 
   <section id="gallery">
-    <h2>Galerie</h2>
+    <h2>Gallery</h2>
     <div class="gallery-tabs">
-      <button class="tab-button active" onclick="showCategory('posters')">posters</button>
-      <button class="tab-button" onclick="showCategory('videos')">Videous</button>
-      <button class="tab-button" onclick="showCategory('webdesign')">Web design</button>
-      <button class="tab-button" onclick="showCategory('drawing')">Drawing</button>
+      <button class="tab-button active" data-category="posters">posters</button>
+      <button class="tab-button" data-category="videos">Videos</button>
+      <button class="tab-button" data-category="webdesign">Web design</button>
+      <button class="tab-button" data-category="drawing">Drawing</button>
     </div>
     <div id="posters" class="gallery-category active">
       <div class="project-gallery">
         <div class="project-item">
-          <p>Animate japan</p>
-          <img src="JAPAN_poster.png" alt="JAPAN poster" width="300">
+          <p>Animated Japan</p>
+          <img src="JAPAN_poster.png" alt="JAPAN poster">
         </div>
         <div class="project-item">
           <p>Jobs</p>
-          <img src="JOBS_poster.png" alt="JOBS poster" width="300">
+          <img src="JOBS_poster.png" alt="JOBS poster">
         </div>
         <div class="project-item">
           <p>Lamborghini</p>
-          <img src="lamborghini_poster.png" alt="Lamborghini poster" width="300">
+          <img src="lamborghini_poster.png" alt="Lamborghini poster">
         </div>
         <div class="project-item">
           <p>PS5</p>
-          <img src="PS5_poster.png" alt="PS5 poster" width="300">
+          <img src="PS5_poster.png" alt="PS5 poster">
         </div>
         <div class="project-item">
           <p>League of Legends</p>
-          <img src="LOL_poster.png" alt="LOL poster" width="300">
+          <img src="LOL_poster.png" alt="LOL poster">
         </div>
         <div class="project-item">
           <p>Stranger Things</p>
-          <img src="stranger_thing_poster.png" alt="Stranger Things poster" width="300">
+          <img src="stranger_thing_poster.png" alt="Stranger Things poster">
         </div>
         <div class="project-item">
           <p>Ocean</p>
-          <img src="ocean_poster.png" alt="Ocean poster" width="300">
+          <img src="ocean_poster.png" alt="Ocean poster">
         </div>
         <div class="project-item">
           <p>Skateboarding</p>
-          <img src="SKATE.png" alt="Skate poster" width="300">
+          <img src="SKATE.png" alt="Skate poster">
         </div>
       </div>
     </div>
     <div id="videos" class="gallery-category">
-      <p>Videa budou brzy přidána.</p>
+      <p>Videos will be added soon.</p>
     </div>
-    <div id="websites" class="gallery-category">
+    <div id="webdesign" class="gallery-category">
       <div class="project-gallery">
         <div class="project-item">
           <p>RAZER</p>
-          <img src="RAZER.png" alt="RAZER website" width="300">
+          <img src="RAZER.png" alt="RAZER website">
         </div>
       </div>
     </div>
     <div id="drawing" class="gallery-category">
       <div class="project-gallery">
         <div class="project-item">
-          <p>Tanjiro</p>
-          <img src="tanjiro.jpg" alt="Tanjiro drawing" width="300">
+          <p>Tanjiro Kamado</p>
+          <img src="tanjiro.jpg" alt="Tanjiro drawing">
         </div>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Kontakt</h2>
+    <h2>Contact</h2>
     <p><i class="fas fa-envelope"></i> Email: borekfranek08@gmail.com</p>
     <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/borek_franek08">Bořek Franek</a></p>
     <p><i class="fab fa-instagram"></i> Instagram: <a href="https://www.instagram.com/borek_franek">Bořek Franek</a></p>
